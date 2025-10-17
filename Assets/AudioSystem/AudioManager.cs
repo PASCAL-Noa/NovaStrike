@@ -56,7 +56,7 @@ public class AudioManager : MonoBehaviour
     }
     public void SwitchIsNotMute(bool switchsounds)
     {
-        musicSource.mute = switchsounds;
-        sfxSource.mute = switchsounds;
+        musicSource.mute = !switchsounds;
+        sfxSource.mute = !switchsounds;
     }
 }

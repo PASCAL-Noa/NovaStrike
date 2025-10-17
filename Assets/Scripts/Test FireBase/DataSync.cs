@@ -24,10 +24,10 @@ public class DataSync : MonoBehaviour
             {
                 FirebaseApp app = FirebaseApp.DefaultInstance;
 
-                firebaseDatabase = FirebaseDatabase.GetInstance(app, "https://serverdbunity-default-rtdb.europe-west1.firebasedatabase.app/");
+                firebaseDatabase = FirebaseDatabase.GetInstance(app, "https://novastrike-ae947-default-rtdb.europe-west1.firebasedatabase.app/");
                 dbRef = firebaseDatabase.RootReference;
 
-                Debug.Log("Firebase initialisé avec succès !");
+                Debug.Log("Firebase initialisÃ© avec succÃ©s !");
             }
             else
             {
@@ -44,7 +44,7 @@ public class DataSync : MonoBehaviour
             if (task.IsCompleted)
                 Debug.Log($"sauvegarde joueur {playerData.id} Reussis");
             else
-                Debug.LogError($"Échec sauvegarde joueur {playerData.id} : " + task.Exception?.Message);
+                Debug.LogError($"Ã©chec sauvegarde joueur {playerData.id} : " + task.Exception?.Message);
         });
     }
 
@@ -59,11 +59,11 @@ public class DataSync : MonoBehaviour
                 {
                     PlayerData playerData = JsonUtility.FromJson<PlayerData>(snapshot.GetRawJsonValue());
                     onLoaded?.Invoke(playerData);
-                    Debug.Log($"Données du joueur {playerId} chargées !");
+                    Debug.Log($"Donnï¿½es du joueur {playerId} chargÃ©es !");
                 }
                 else
                 {
-                    Debug.LogWarning($"Aucune sauvegarde trouvée pour {playerId}.");
+                    Debug.LogWarning($"Aucune sauvegarde trouvÃ©e pour {playerId}.");
                     onLoaded?.Invoke(null);
                 }
             }

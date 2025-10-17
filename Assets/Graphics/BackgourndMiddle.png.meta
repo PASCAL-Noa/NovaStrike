@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 4945eef85d1e8e54dbc1e528c0eb322c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8768916283097577467
+    second: BackgourndMiddle_0
+  - first:
+      213: 1299769709027966196
+    second: BackgourndMiddle_1
+  - first:
+      213: -2511853667906458783
+    second: BackgourndMiddle_2
+  - first:
+      213: -3119433105325861543
+    second: BackgourndMiddle_3
+  - first:
+      213: -6906179390714660743
+    second: BackgourndMiddle_4
+  - first:
+      213: -845878747161553982
+    second: BackgourndMiddle_5
+  - first:
+      213: -1260308369336517016
+    second: BackgourndMiddle_6
+  - first:
+      213: 6482090672144670284
+    second: BackgourndMiddle_7
+  - first:
+      213: 4653340475250796107
+    second: BackgourndMiddle_8
+  - first:
+      213: 8577618019410143788
+    second: BackgourndMiddle_9
+  - first:
+      213: -7000427812507703745
+    second: BackgourndMiddle_10
+  - first:
+      213: -5952970380058500297
+    second: BackgourndMiddle_11
+  - first:
+      213: 8273559755847719219
+    second: BackgourndMiddle_12
+  - first:
+      213: 5835102298212951461
+    second: BackgourndMiddle_13
+  - first:
+      213: -535202190148749205
+    second: BackgourndMiddle_14
+  - first:
+      213: -4231697256590190076
+    second: BackgourndMiddle_15
+  - first:
+      213: 6237816297837590028
+    second: BackgourndMiddle_16
+  - first:
+      213: 5955561551637837319
+    second: BackgourndMiddle_17
+  - first:
+      213: -4094335083057388848
+    second: BackgourndMiddle_18
+  - first:
+      213: 3201484780562826339
+    second: BackgourndMiddle_19
+  - first:
+      213: -1986625743821536175
+    second: BackgourndMiddle_20
+  - first:
+      213: -3768975358760535204
+    second: BackgourndMiddle_21
+  - first:
+      213: -1195110181732388495
+    second: BackgourndMiddle_22
+  - first:
+      213: 3020653983432023998
+    second: BackgourndMiddle_23
+  - first:
+      213: 901657762982338123
+    second: BackgourndMiddle_24
+  - first:
+      213: 7868693538582980963
+    second: BackgourndMiddle_25
+  - first:
+      213: -566791147799770009
+    second: BackgourndMiddle_26
+  - first:
+      213: -5161429658716018112
+    second: BackgourndMiddle_27
+  - first:
+      213: -5818236919293409316
+    second: BackgourndMiddle_28
+  - first:
+      213: -9074257565378692563
+    second: BackgourndMiddle_29
+  - first:
+      213: -6499736417775826102
+    second: BackgourndMiddle_30
+  - first:
+      213: -6599273284392233521
+    second: BackgourndMiddle_31
+  - first:
+      213: 7934305052334224268
+    second: BackgourndMiddle_32
+  - first:
+      213: 7929463054047290957
+    second: BackgourndMiddle_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BackgourndMiddle_0
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 594
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50884d8a91d8e4680800000000000000
+      internalID: -8768916283097577467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_1
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 601
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcbc64f9a5b90210800000000000000
+      internalID: 1299769709027966196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 584
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b6cacb56a142dd0800000000000000
+      internalID: -2511853667906458783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 562
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95555704e1c85b4d0800000000000000
+      internalID: -3119433105325861543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 548
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97834554f625820a0800000000000000
+      internalID: -6906179390714660743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_5
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 505
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c31268d2c5d244f0800000000000000
+      internalID: -845878747161553982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_6
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 482
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ebe3a273c728ee0800000000000000
+      internalID: -1260308369336517016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_7
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 486
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e5e0b6f1305f950800000000000000
+      internalID: 6482090672144670284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_8
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 452
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46654ef18cf39040800000000000000
+      internalID: 4653340475250796107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_9
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 454
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a6ee97422d90770800000000000000
+      internalID: 8577618019410143788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_10
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 435
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36a6bf8efb79de90800000000000000
+      internalID: -7000427812507703745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 410
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733e032cafcc26da0800000000000000
+      internalID: -5952970380058500297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 386
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339554343c691d270800000000000000
+      internalID: 8273559755847719219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_13
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 375
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a56c01ef927af050800000000000000
+      internalID: 5835102298212951461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_14
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 346
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b683c2591749298f0800000000000000
+      internalID: -535202190148749205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_15
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 335
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a52fff3cdf545c0800000000000000
+      internalID: -4231697256590190076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 327
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0670ce9fdc219650800000000000000
+      internalID: 6237816297837590028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_17
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 316
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706f8536da766a250800000000000000
+      internalID: 5955561551637837319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_18
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 305
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2e1f64feffd27c0800000000000000
+      internalID: -4094335083057388848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_19
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 237
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364444b1275fd6c20800000000000000
+      internalID: 3201484780562826339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 231
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1540fdd59661e64e0800000000000000
+      internalID: -1986625743821536175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_21
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 231
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bb0ed41e8e1bbc0800000000000000
+      internalID: -3768975358760535204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_22
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 220
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17173662f9d1a6fe0800000000000000
+      internalID: -1195110181732388495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_23
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 195
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf95d73bc48be920800000000000000
+      internalID: 3020653983432023998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_24
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 201
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e198f45f4538c00800000000000000
+      internalID: 901657762982338123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_25
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 176
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36966ad4517333d60800000000000000
+      internalID: 7868693538582980963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_26
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 110
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c0f8d347a5228f0800000000000000
+      internalID: -566791147799770009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_27
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 118
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ae013621bee58b0800000000000000
+      internalID: -5161429658716018112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_28
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 93
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd704762958714fa0800000000000000
+      internalID: -5818236919293409316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_29
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 82
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ab33f52d2c11280800000000000000
+      internalID: -9074257565378692563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_30
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 97
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4b4dc44a2c4cc5a0800000000000000
+      internalID: -6499736417775826102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_31
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 42
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5531c89ebaa64a0800000000000000
+      internalID: -6599273284392233521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_32
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 34
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83f7f748605c1e60800000000000000
+      internalID: 7934305052334224268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgourndMiddle_33
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 21
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46a214b2ac1b0e60800000000000000
+      internalID: 7929463054047290957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BackgourndMiddle_0: -8768916283097577467
+      BackgourndMiddle_1: 1299769709027966196
+      BackgourndMiddle_10: -7000427812507703745
+      BackgourndMiddle_11: -5952970380058500297
+      BackgourndMiddle_12: 8273559755847719219
+      BackgourndMiddle_13: 5835102298212951461
+      BackgourndMiddle_14: -535202190148749205
+      BackgourndMiddle_15: -4231697256590190076
+      BackgourndMiddle_16: 6237816297837590028
+      BackgourndMiddle_17: 5955561551637837319
+      BackgourndMiddle_18: -4094335083057388848
+      BackgourndMiddle_19: 3201484780562826339
+      BackgourndMiddle_2: -2511853667906458783
+      BackgourndMiddle_20: -1986625743821536175
+      BackgourndMiddle_21: -3768975358760535204
+      BackgourndMiddle_22: -1195110181732388495
+      BackgourndMiddle_23: 3020653983432023998
+      BackgourndMiddle_24: 901657762982338123
+      BackgourndMiddle_25: 7868693538582980963
+      BackgourndMiddle_26: -566791147799770009
+      BackgourndMiddle_27: -5161429658716018112
+      BackgourndMiddle_28: -5818236919293409316
+      BackgourndMiddle_29: -9074257565378692563
+      BackgourndMiddle_3: -3119433105325861543
+      BackgourndMiddle_30: -6499736417775826102
+      BackgourndMiddle_31: -6599273284392233521
+      BackgourndMiddle_32: 7934305052334224268
+      BackgourndMiddle_33: 7929463054047290957
+      BackgourndMiddle_4: -6906179390714660743
+      BackgourndMiddle_5: -845878747161553982
+      BackgourndMiddle_6: -1260308369336517016
+      BackgourndMiddle_7: 6482090672144670284
+      BackgourndMiddle_8: 4653340475250796107
+      BackgourndMiddle_9: 8577618019410143788
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

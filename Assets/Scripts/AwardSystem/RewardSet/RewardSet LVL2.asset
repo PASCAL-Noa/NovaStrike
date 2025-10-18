@@ -15,15 +15,27 @@ MonoBehaviour:
   setName: Level 2 Rewards
   rewardMilestones:
   - 0
-  - 0.5
-  - 0
+  - 0.3
+  - 0.694
   - 1
   rewards:
   - rewardName: FireRate
     description: 
     value: -0.05
     rewardType: 3
+    weaponIdToUnlock: 
   - rewardName: Health
     description: 
-    value: 200
+    value: 100
     rewardType: 0
+    weaponIdToUnlock: 
+  - rewardName: Health
+    description: 
+    value: 0
+    rewardType: 0
+    weaponIdToUnlock: 
+  - rewardName: Speed
+    description: 
+    value: 2
+    rewardType: 2
+    weaponIdToUnlock: 

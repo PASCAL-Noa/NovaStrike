@@ -9,8 +9,6 @@ public class Weapon : Entity
     [SerializeField] private LevelSystem _mWeaponLevelSystem ;
     [SerializeField] private bool is_unlocked;
     [SerializeField] protected AudioClip deathSfx; 
-  
-    public event Action<Weapon> OnWeaponDeath;
     
     public LevelSystem WeaponLevelSystem
     {

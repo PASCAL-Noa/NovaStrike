@@ -10271,6 +10271,7 @@ MonoBehaviour:
   levelRewardSets:
   - {fileID: 11400000, guid: ce5276557d7a6244381ddea7e4e19421, type: 2}
   - {fileID: 11400000, guid: d9099f7e543a8ad49873dbafba26c7fa, type: 2}
+  - {fileID: 11400000, guid: 5d3e6898defefa547a3050090d071682, type: 2}
 --- !u!1 &7303513468972216349
 GameObject:
   m_ObjectHideFlags: 0

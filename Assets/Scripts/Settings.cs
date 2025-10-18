@@ -12,7 +12,7 @@ public class Settings : MonoBehaviour
     [SerializeField] TMP_Dropdown dropdown;
     [SerializeField] Toggle Toggle;
     [SerializeField] List<Color> backgroundColors;
-    [SerializeField] AudioManager audio;
+    [SerializeField] AudioManager audioSource;
 
 
     private string _mSavePath;
@@ -92,7 +92,7 @@ public class Settings : MonoBehaviour
     }
     public void SetSounds()
     {
-        audio.SwitchIsNotMute(_mSoundBool);
+        audioSource.SwitchIsNotMute(_mSoundBool);
         SaveSettings();
     }
 }

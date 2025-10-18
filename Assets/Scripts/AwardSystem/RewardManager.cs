@@ -7,8 +7,7 @@ public class RewardManager : MonoBehaviour
     [Header("Références")]
     [SerializeField] private LevelSystem levelSystem;
 
-    // Une seule de ces deux cibles doit être assignée (inspecteur) : weapon OU player
-    [Header("Cible (assigner *exactement* une)")]
+    [Header("Cible (assignez exactement une)")]
     [SerializeField] private Weapon targetWeapon;
     [SerializeField] private Player targetPlayer;
 
@@ -20,19 +19,19 @@ public class RewardManager : MonoBehaviour
 
     private void Awake()
     {
-        // Vérification simple : exactement une des deux cibles doit être fournie
         bool hasWeapon = targetWeapon != null;
         bool hasPlayer = targetPlayer != null;
-        if (hasWeapon == hasPlayer) // soit les deux true, soit les deux false -> erreur
+
+        if (hasWeapon == hasPlayer)
         {
-            Debug.LogError("RewardManager : configurez exactement l'une des cibles (targetWeapon OR targetPlayer) dans l'inspecteur.");
+            Debug.LogError("[RewardManager] Configurez exactement UNE cible (targetWeapon OU targetPlayer).");
             enabled = false;
             return;
         }
 
         if (levelSystem == null)
         {
-            Debug.LogError("RewardManager : levelSystem manquant. Assignez un LevelSystem dans l'inspecteur.");
+            Debug.LogError("[RewardManager] LevelSystem manquant. Assignez-en un dans l'inspecteur.");
             enabled = false;
             return;
         }
@@ -45,9 +44,14 @@ public class RewardManager : MonoBehaviour
 
     private void Update()
     {
-        if (!enabled || levelSystem == null || currentSet == null) return;
+        if (!enabled || levelSystem == null || currentSet == null)
+            return;
+        
+        int currentLevelIndex = levelSystem.CurrentLevel - 1;
+        if (currentLevelIndex >= levelRewardSets.Count) return;
+        
+        float xpRatio = levelSystem.CurrentXp / levelSystem.XpToNextLevel;
 
-        float xpRatio = levelSystem.CurrentXp / (10 + levelSystem.CurrentLevel * 20);
         for (int i = 0; i < currentSet.rewardMilestones.Length; i++)
         {
             if (xpRatio >= currentSet.rewardMilestones[i] && !unlockedMilestones[i])
@@ -55,8 +59,8 @@ public class RewardManager : MonoBehaviour
                 UnlockReward(i);
             }
         }
-
-        if (levelSystem.CurrentLevel > levelRewardSets.IndexOf(currentSet) + 1)
+        
+        if (currentLevelIndex != levelRewardSets.IndexOf(currentSet))
         {
             UpdateRewardSet();
         }
@@ -71,30 +75,35 @@ public class RewardManager : MonoBehaviour
             return;
         }
 
-        int currentLevelIndex = Mathf.Clamp(levelSystem.CurrentLevel - 1, 0, levelRewardSets.Count - 1);
+        int currentLevelIndex = levelSystem.CurrentLevel - 1;
+        
+        if (currentLevelIndex >= levelRewardSets.Count)
+        {
+            Debug.LogWarning($"[RewardManager] Aucun RewardSet défini pour le niveau {levelSystem.CurrentLevel}. Les récompenses sont désactivées.");
+            currentSet = null;
+            unlockedMilestones = null;
+            return;
+        }
+
         currentSet = levelRewardSets[currentLevelIndex];
         unlockedMilestones = new bool[currentSet.rewardMilestones.Length];
 
-        //Debug.Log($"[RewardManager] Ensemble de récompenses chargé : {currentSet.setName}");
+        Debug.Log($"[RewardManager] Chargement des récompenses pour le niveau {currentSet.setName}");
     }
 
     private void UnlockReward(int index)
     {
-        if (currentSet == null) return;
+        if (currentSet == null || index < 0 || index >= currentSet.rewards.Count)
+            return;
 
         unlockedMilestones[index] = true;
 
         Reward reward = currentSet.rewards[index];
 
-        // Appliquer selon la cible configurée
         if (targetWeapon != null)
-        {
             reward.Apply(targetWeapon);
-        }
         else if (targetPlayer != null)
-        {
             reward.ApplyToPlayer(targetPlayer);
-        }
 
         Debug.Log($"Récompense débloquée : {reward.rewardName} ({reward.rewardType}) valeur {reward.value}");
     }

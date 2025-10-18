@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
     {
         debugPanel.SetActive(false);
         SettingsGamePanel.SetActive(true);
-        //ShowSettingsGame();
     }
     
     public void ShowLogin()
@@ -102,6 +101,7 @@ public class UIManager : MonoBehaviour
     {
         GameOver.SetActive(false);
         Game.SetActive(true);
+        GameCanvas.SetActive(true);
         mainMenuPanel.SetActive(false);
         SettingsPanel.SetActive(false);
 
@@ -140,11 +140,8 @@ public class UIManager : MonoBehaviour
             if (weaponReward != null)
                 weaponReward.RefreshState();
         }
-
-        // d�marrer le timer de stages
+        
         GameManager.instance.stageManager?.StartStages();
-
-        // sauvegarde / UI etc.
         GameManager.instance._mPlayer.SavePlayer(DataSync.instance);
         StartCoroutine(ShowSettingsGame());
         Time.timeScale = 1f;

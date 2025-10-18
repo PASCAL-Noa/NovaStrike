@@ -1,6 +1,6 @@
 # 🚀 Nova-Strike – Conquer the Stars, One Missile at a Time 🌌
 
-> **Download the [latest release](https://github.com/PASCAL-Noa/NovaStrike/releases/tag/v0.1)** to jump straight into the action!  
+> **Download the [latest release](https://github.com/PASCAL-Noa/NovaStrike/releases/tag/v0.2)** to jump straight into the action!  
 > Or clone the repository to explore the source code and contribute to the project.
 
 **Nova-Strike** is an explosive space shooter developed with Unity.  

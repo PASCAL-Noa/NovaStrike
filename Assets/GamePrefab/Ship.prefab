@@ -10236,6 +10236,7 @@ MonoBehaviour:
   statistics: {fileID: 7703126439708619968}
   _mWeaponLevelSystem: {fileID: 2762852751376509682}
   is_unlocked: 1
+  deathSfx: {fileID: 8300000, guid: a15190045f4606b4d8a25298beaf4217, type: 3}
   movement: {fileID: 9064277277997909285}
   shooting: {fileID: 21778448302190296}
 --- !u!114 &2762852751376509682

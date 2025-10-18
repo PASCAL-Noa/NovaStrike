@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public List<Weapon> allWeapons;
     [SerializeField] public UIManager uiManager; // assigne dans l'inspecteur
     [SerializeField] public StageManager stageManager; // assigne dans l'inspecteur
+    [SerializeField] public AudioManager audioManager;
 
     private void Awake()
     {

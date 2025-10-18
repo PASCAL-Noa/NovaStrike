@@ -6,6 +6,7 @@ public class Ship : Weapon
     [Header("References")]
     [SerializeField] private WeaponMovement movement;
     [SerializeField] private PlayerShooting shooting;
+   
 
     private void Start()
     {
@@ -31,14 +32,4 @@ public class Ship : Weapon
             Destroy(other.gameObject);
         }
     }
-
-    protected override void OnDeath()
-    {
-        GameManager.instance._mPlayer.Weapon = GameManager.instance.allWeapons[0];
-        GameManager.instance?.GameOver();
-        Destroy(gameObject);
-    }
-
-
-
 }

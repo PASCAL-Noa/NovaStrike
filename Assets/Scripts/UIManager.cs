@@ -1,124 +1,147 @@
-using System.Collections;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DisallowMultipleComponent]
 public class UIManager : MonoBehaviour
 {
+    [Header("Panels Principaux")]
     [SerializeField] private GameObject loginPanel;
     [SerializeField] private GameObject mainMenuPanel;
-    [SerializeField] private GameObject SettingsPanel;
-    [SerializeField] private GameObject SettingsGamePanel;
-    [SerializeField] private GameObject GameCanvas;
-    [SerializeField] private GameObject Game;
-    [SerializeField] private GameObject GameOver;
-    [SerializeField] private ShipSelectionMenu shipSelectionMenu;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject gameCanvas;
+    [SerializeField] private GameObject gameRoot;
+    [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject debugPanel;
-    private bool isSettingsOpen = false;
 
+    [Header("Menus Spécifiques")]
+    [SerializeField] private ShipSelectionMenu shipSelectionMenu;
 
-    public void ShowDebug()
+    private bool isDebugOpen;
+    private Keyboard keyboard;
+
+    private void Awake() => keyboard = Keyboard.current;
+    private void Start() => ShowLogin();
+
+    private void Update()
     {
-        debugPanel.SetActive(true);
-        SettingsGamePanel.SetActive(false);
+        if (keyboard == null) return;
+        if (keyboard.escapeKey.wasPressedThisFrame) HandleEscapeKey();
+        if (keyboard.f1Key.wasPressedThisFrame) ToggleDebugMenu();
     }
 
-    public void HideDebug()
-    {
-        debugPanel.SetActive(false);
-        SettingsGamePanel.SetActive(true);
-    }
-    
+    #region Panels Logic
+
     public void ShowLogin()
     {
-        print("Show Login Panel");
-        loginPanel.SetActive(true);
-        mainMenuPanel.SetActive(false);
-        SettingsGamePanel.SetActive(false);
-        Game.SetActive(false);
-
+        SetActivePanel(loginPanel);
     }
 
     public void ShowMainMenu()
     {
-        loginPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
-        Game.SetActive(false);
-        SettingsPanel.SetActive(false);
-        GameOver.SetActive(false);
+        SetActivePanel(mainMenuPanel);
         shipSelectionMenu.PopulateShips(GameManager.instance.allWeapons);
+        Time.timeScale = 1f;
+    }
+
+    public void ShowSettings()
+    {
+        SetActivePanel(settingsPanel);
+    }
+
+    public void ShowGame()
+    {
+        SetActivePanel(gameRoot);
+        gameCanvas.SetActive(true);
+        gameOverPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void ShowGameOver()
     {
-        GameOver.SetActive(true);
-        GameCanvas.SetActive(false);
-        Game.SetActive(false);
-        SettingsPanel.SetActive(false);
-        mainMenuPanel.SetActive(false);
-        loginPanel.SetActive(false);
+        SetActivePanel(gameOverPanel);
+        gameCanvas.SetActive(false);
+        Time.timeScale = 0f;
     }
 
-    public void ShowSettings()
+    private void SetActivePanel(GameObject target)
     {
         loginPanel.SetActive(false);
-        SettingsPanel.SetActive(true);
-        Game.SetActive(false);
         mainMenuPanel.SetActive(false);
+        settingsPanel.SetActive(false);
+        gameRoot.SetActive(false);
+        gameCanvas.SetActive(false);
+        gameOverPanel.SetActive(false);
+        debugPanel.SetActive(false);
+        
+        if (target != null) target.SetActive(true);
     }
 
-    public void ShowSettingsInGame()
-    {
-        SettingsGamePanel.SetActive(true);
-        Time.timeScale = 0f; 
-    }
+    #endregion
 
-    public void HideSettingsGame()
-    {
-        SettingsGamePanel.SetActive(false);
-        Time.timeScale = 1f; 
-    }
+    #region Input Logic
 
-    private IEnumerator ShowSettingsGame()
+    private void HandleEscapeKey()
     {
-        while (true)
+        if (isDebugOpen)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                isSettingsOpen = !isSettingsOpen;
+            HideDebugMenu();
+            return;
+        }
 
-                if (isSettingsOpen)
-                    ShowSettingsInGame();
-                else
-                    HideSettingsGame();
-            }
-            yield return null;
+        if (settingsPanel.activeSelf)
+        {
+            ShowMainMenu();
+        }
+        else if (gameRoot.activeSelf)
+        {
+            return;
+        }
+        else
+        {
+            ShowMainMenu();
         }
     }
 
+    private void ToggleDebugMenu()
+    {
+        if (isDebugOpen) HideDebugMenu();
+        else ShowDebugMenu();
+    }
+
+    private void ShowDebugMenu()
+    {
+        isDebugOpen = true;
+        debugPanel.SetActive(true);
+        
+        if (gameRoot.activeSelf) Time.timeScale = 0f;
+    }
+
+    private void HideDebugMenu()
+    {
+        isDebugOpen = false;
+        debugPanel.SetActive(false);
+        
+        if (gameRoot.activeSelf) Time.timeScale = 1f;
+    }
+
+    #endregion
+
+    #region Gameplay
+
     public void PlayGame()
     {
-        GameOver.SetActive(false);
-        Game.SetActive(true);
-        GameCanvas.SetActive(true);
-        mainMenuPanel.SetActive(false);
-        SettingsPanel.SetActive(false);
-
+        ShowGame();
 
         if (GameManager.instance._mPlayer.Weapon != null)
         {
             Weapon prefab = GameManager.instance._mPlayer.Weapon;
             Weapon instance = Instantiate(prefab);
-
             instance.name = prefab.name;
 
-            var weaponReward = instance.GetComponentInChildren<RewardManager>();
-            if (weaponReward != null) weaponReward.RefreshState();
+            var rewardManager = instance.GetComponentInChildren<RewardManager>();
+            rewardManager?.RefreshState();
 
-            WeaponData wData = null;
-            if (GameManager.instance._mPlayer.unlockedWeaponsData != null)
-                wData = GameManager.instance._mPlayer.unlockedWeaponsData.Find(w => w.weaponId == prefab.name);
+            WeaponData wData = GameManager.instance._mPlayer.unlockedWeaponsData?.Find(w => w.weaponId == prefab.name);
 
             if (wData != null && instance.WeaponLevelSystem != null)
             {
@@ -134,16 +157,13 @@ public class UIManager : MonoBehaviour
             }
 
             instance.IsUnlocked = true;
-
             GameManager.instance._mPlayer.Weapon = instance;
-
-            if (weaponReward != null)
-                weaponReward.RefreshState();
+            rewardManager?.RefreshState();
         }
-        
+
         GameManager.instance.stageManager?.StartStages();
         GameManager.instance._mPlayer.SavePlayer(DataSync.instance);
-        StartCoroutine(ShowSettingsGame());
-        Time.timeScale = 1f;
     }
+
+    #endregion
 }

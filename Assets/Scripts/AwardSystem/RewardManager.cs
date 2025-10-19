@@ -16,6 +16,7 @@ public class RewardManager : MonoBehaviour
 
     private RewardSet currentSet;
     private bool[] unlockedMilestones;
+    private int lastKnownLevel = -1;
 
     private void Awake()
     {
@@ -46,11 +47,8 @@ public class RewardManager : MonoBehaviour
     {
         if (!enabled || levelSystem == null || currentSet == null)
             return;
-        
-        int currentLevelIndex = levelSystem.CurrentLevel - 1;
-        if (currentLevelIndex >= levelRewardSets.Count) return;
-        
-        float xpRatio = levelSystem.CurrentXp / levelSystem.XpToNextLevel;
+
+        float xpRatio = Mathf.Clamp01(levelSystem.CurrentXp / levelSystem.XpToNextLevel);
 
         for (int i = 0; i < currentSet.rewardMilestones.Length; i++)
         {
@@ -59,9 +57,10 @@ public class RewardManager : MonoBehaviour
                 UnlockReward(i);
             }
         }
-        
-        if (currentLevelIndex != levelRewardSets.IndexOf(currentSet))
+
+        if (levelSystem.CurrentLevel != lastKnownLevel)
         {
+            lastKnownLevel = levelSystem.CurrentLevel;
             UpdateRewardSet();
         }
     }
@@ -79,7 +78,7 @@ public class RewardManager : MonoBehaviour
         
         if (currentLevelIndex >= levelRewardSets.Count)
         {
-            Debug.LogWarning($"[RewardManager] Aucun RewardSet défini pour le niveau {levelSystem.CurrentLevel}. Les récompenses sont désactivées.");
+            Debug.LogWarning($"[RewardManager] Aucun RewardSet défini pour le niveau {levelSystem.CurrentLevel}. Récompenses désactivées.");
             currentSet = null;
             unlockedMilestones = null;
             return;
@@ -87,8 +86,7 @@ public class RewardManager : MonoBehaviour
 
         currentSet = levelRewardSets[currentLevelIndex];
         unlockedMilestones = new bool[currentSet.rewardMilestones.Length];
-
-        Debug.Log($"[RewardManager] Chargement des récompenses pour le niveau {currentSet.setName}");
+        Debug.Log($"[RewardManager] Chargement des récompenses pour {currentSet.setName}");
     }
 
     private void UnlockReward(int index)
@@ -115,7 +113,7 @@ public class RewardManager : MonoBehaviour
 
         if (currentSet == null) return;
 
-        float xpRatio = levelSystem.CurrentXp / Mathf.Max(1f, levelSystem.XpToNextLevel);
+        float xpRatio = Mathf.Clamp01(levelSystem.CurrentXp / levelSystem.XpToNextLevel);
         for (int i = 0; i < currentSet.rewardMilestones.Length; i++)
         {
             if (xpRatio >= currentSet.rewardMilestones[i] && !unlockedMilestones[i])

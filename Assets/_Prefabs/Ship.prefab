@@ -10048,9 +10048,9 @@ GameObject:
   - component: {fileID: 6246118097474817928}
   - component: {fileID: 6989992091274117165}
   - component: {fileID: 5108638389117121767}
+  - component: {fileID: 8114517539599042320}
   - component: {fileID: 21778448302190296}
   - component: {fileID: 7703126439708619968}
-  - component: {fileID: 8114517539599042320}
   - component: {fileID: 9064277277997909285}
   - component: {fileID: 8090741059639283198}
   - component: {fileID: 2762852751376509682}
@@ -10136,6 +10136,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!143 &8114517539599042320
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765950339126416690}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 0.07607816
+  m_Radius: 0.056401774
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &21778448302190296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10180,31 +10205,6 @@ MonoBehaviour:
   - Type: 3
     Current: 0.2
     Maximum: 1
---- !u!143 &8114517539599042320
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6765950339126416690}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 0.07607816
-  m_Radius: 0.056401774
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9064277277997909285
 MonoBehaviour:
   m_ObjectHideFlags: 0

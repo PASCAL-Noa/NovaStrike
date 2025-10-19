@@ -31,13 +31,4 @@ public class Ovnie : Weapon
             Destroy(other.gameObject);
         }
     }
-
-    protected override void OnDeath()
-    {
-        GameManager.instance._mPlayer.Weapon = GameManager.instance.allWeapons[1];
-        Destroy(gameObject);
-    }
-
-
-
 }

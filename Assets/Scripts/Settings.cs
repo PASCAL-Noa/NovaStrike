@@ -9,7 +9,6 @@ public class Settings : MonoBehaviour
 {
     [SerializeField] public bool _mSoundBool;
     [SerializeField] public int _mSelectedBackGround;
-    [SerializeField] TMP_Dropdown dropdown;
     [SerializeField] Toggle Toggle;
     [SerializeField] List<Color> backgroundColors;
     [SerializeField] AudioManager audioSource;
@@ -26,16 +25,14 @@ public class Settings : MonoBehaviour
     void Start()
     {
         LoadSettings();
-        dropdown.value = _mSelectedBackGround;
         Toggle.isOn = _mSoundBool;
         SetBackground();
         SetSounds();
-        dropdown.onValueChanged.AddListener(delegate { OnDropdownChanged(); });
     }
 
     void Update()
     {
-        _mSelectedBackGround = dropdown.value;
+        
     }
 
     void SetBackground()
@@ -48,7 +45,6 @@ public class Settings : MonoBehaviour
 
     void OnDropdownChanged()
     {
-        _mSelectedBackGround = dropdown.value;
         SetBackground();
         SaveSettings();
     }

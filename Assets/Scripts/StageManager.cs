@@ -9,7 +9,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private float spawnMultiplierPerStage = 0.9f;
     [SerializeField] private int maxStage = 10;
 
-    [Header("Référence directe (optionnelle)")]
+    [Header("Rï¿½fï¿½rence directe (optionnelle)")]
     [SerializeField] private EnemySpawner enemySpawner;
 
     public int CurrentStage { get; private set; } = 0;
@@ -39,13 +39,13 @@ public class StageManager : MonoBehaviour
     public void StartStages()
     {
         Elapsed = 0f;
-        CurrentStage = GameManager.instance._mPlayer._mStage;
+        CurrentStage = GameManager.instance._mPlayer.Stage;
         IsRunning = true;
         ApplySpawnMultiplier();
 
         if (GameManager.instance != null && GameManager.instance._mPlayer != null)
         {
-            GameManager.instance._mPlayer._mStage = CurrentStage;
+            GameManager.instance._mPlayer.Stage = CurrentStage;
 
         }
     }

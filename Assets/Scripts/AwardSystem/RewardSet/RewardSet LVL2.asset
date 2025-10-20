@@ -31,11 +31,6 @@ MonoBehaviour:
     weaponIdToUnlock: 
   - rewardName: Health
     description: 
-    value: 0
-    rewardType: 0
-    weaponIdToUnlock: 
-  - rewardName: Speed
-    description: 
-    value: 2
+    value: 5
     rewardType: 2
     weaponIdToUnlock: 

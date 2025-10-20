@@ -29,11 +29,6 @@ MonoBehaviour:
     value: 0
     rewardType: 4
     weaponIdToUnlock: 
-  - rewardName: Attack
-    description: 
-    value: 5
-    rewardType: 1
-    weaponIdToUnlock: 
   - rewardName: Triple cannon
     description: Ajoute un nouveau canon au ship
     value: 0

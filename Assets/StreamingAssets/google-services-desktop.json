@@ -1,46 +1,37 @@
 {
   "project_info": {
-    "project_number": "15854260313",
-    "firebase_url": "https://serverdbunity-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "serverdbunity",
-    "storage_bucket": "serverdbunity.firebasestorage.app"
+    "project_number": "527598276645",
+    "firebase_url": "https://novastrike-ae947-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "novastrike-ae947",
+    "storage_bucket": "novastrike-ae947.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:15854260313:android:294daf016ddcfe0eb36148",
+        "mobilesdk_app_id": "1:527598276645:android:ef978c250aa43af1076fcc",
         "android_client_info": {
-          "package_name": "spaceshooter.uni"
+          "package_name": "com.DefaultCompany.lyo3mswitchs1p203"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "527598276645-724prdp24o4fbbs4lkjkhv70iphs9m2t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCDIf_lVrR_9RiNKYlEq0bw6pAuv8615To"
+          "current_key": "AIzaSyDfLvhAXWUeAzz6vd9rnS-eSbtllf12_V4"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:15854260313:android:462181ab330475b5b36148",
-        "android_client_info": {
-          "package_name": "unityte.sttest"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCDIf_lVrR_9RiNKYlEq0bw6pAuv8615To"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527598276645-724prdp24o4fbbs4lkjkhv70iphs9m2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -14,28 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setName: Level 3 Rewards
   rewardMilestones:
+  - 0
   - 0.2
-  - 0.5
-  - 0.7
-  - 1
+  - 0.4
+  - 0.6
+  - 0.8
   rewards:
   - rewardName: 
     description: 
-    value: 0
+    value: 10
     rewardType: 0
     weaponIdToUnlock: 
   - rewardName: 
     description: 
-    value: 0
-    rewardType: 0
-    weaponIdToUnlock: 
-  - rewardName: 
-    description: 
-    value: 0
-    rewardType: 0
-    weaponIdToUnlock: 
-  - rewardName: 
-    description: 
-    value: 3
+    value: 10
     rewardType: 1
+    weaponIdToUnlock: 
+  - rewardName: 
+    description: 
+    value: 5
+    rewardType: 2
+    weaponIdToUnlock: 
+  - rewardName: 
+    description: 
+    value: 0.5
+    rewardType: 3
     weaponIdToUnlock: 

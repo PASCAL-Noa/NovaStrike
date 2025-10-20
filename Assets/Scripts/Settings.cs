@@ -59,7 +59,7 @@ public class Settings : MonoBehaviour
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(SavePath, json);
  
-        if (GameManager.instance != null && GameManager.instance._mPlayer.ID != null)
+        if (GameManager.instance != null && GameManager.instance._mPlayer.FirebaseUserId != null)
             GameManager.instance._mPlayer.SavePlayer(DataSync.instance);
     }
 

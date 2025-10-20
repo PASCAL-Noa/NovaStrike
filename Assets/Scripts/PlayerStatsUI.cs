@@ -67,7 +67,7 @@ public class PlayerStatsUI : MonoBehaviour
         xpBar.fillAmount = player.Weapon.WeaponLevelSystem.XpProgression;
         xpText.text = player.Weapon.WeaponLevelSystem.CurrentXp.ToString("0.0") + " / " + GameManager.instance._mPlayer.Weapon.WeaponLevelSystem.XpToNextLevel.ToString("0.0");
 
-        IdText.text = GameManager.instance._mPlayer.ID;
+        IdText.text = GameManager.instance._mPlayer.UserName;
         AccLevel.text = "Player Level " + GameManager.instance._mPlayer.LevelSystemPlayer.CurrentLevel;
         WeaponLevel.text = "Weapon Level " + GameManager.instance._mPlayer.Weapon.WeaponLevelSystem.CurrentLevel;
         Stage.text = "Stage " + GameManager.instance.stageManager.CurrentStage;

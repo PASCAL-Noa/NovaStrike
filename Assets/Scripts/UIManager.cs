@@ -5,13 +5,18 @@ using UnityEngine.InputSystem;
 public class UIManager : MonoBehaviour
 {
     [Header("Panels Principaux")]
-    [SerializeField] private GameObject loginPanel;
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private GameObject gameRoot;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject debugPanel;
+    
+    [Header("Login Sub-Panels")]
+    [SerializeField] private GameObject loginSubPanel;
+    [SerializeField] private GameObject signupSubPanel;
+    [SerializeField] private GameObject loginMainPanel;
+
 
     [Header("Menus Spécifiques")]
     [SerializeField] private ShipSelectionMenu shipSelectionMenu;
@@ -33,12 +38,14 @@ public class UIManager : MonoBehaviour
 
     public void ShowLogin()
     {
-        SetActivePanel(loginPanel);
+        SetActivePanel(loginMainPanel);
     }
 
     public void ShowMainMenu()
     {
         SetActivePanel(mainMenuPanel);
+        loginSubPanel.SetActive(false);
+        signupSubPanel.SetActive(false);
         shipSelectionMenu.PopulateShips(GameManager.instance.allWeapons);
         Time.timeScale = 1f;
     }
@@ -65,7 +72,7 @@ public class UIManager : MonoBehaviour
 
     private void SetActivePanel(GameObject target)
     {
-        loginPanel.SetActive(false);
+        loginMainPanel.SetActive(false);
         mainMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         gameRoot.SetActive(false);
@@ -87,20 +94,23 @@ public class UIManager : MonoBehaviour
             HideDebugMenu();
             return;
         }
-
+        
+        if (gameRoot.activeSelf)
+            return;
+        
         if (settingsPanel.activeSelf)
         {
             ShowMainMenu();
-        }
-        else if (gameRoot.activeSelf)
-        {
             return;
         }
-        else
+        
+        if (loginSubPanel.activeSelf || signupSubPanel.activeSelf)
         {
-            ShowMainMenu();
+            ShowLoginMainPanel();
+            return;
         }
     }
+
 
     private void ToggleDebugMenu()
     {
@@ -166,4 +176,26 @@ public class UIManager : MonoBehaviour
     }
 
     #endregion
+    
+    
+    public void ShowLoginMainPanel()
+    {
+        loginMainPanel.SetActive(true);
+        loginSubPanel.SetActive(false);
+        signupSubPanel.SetActive(false);
+    }
+    
+    public void ShowLoginSubPanel()
+    {
+        loginMainPanel.SetActive(false);
+        loginSubPanel.SetActive(true);
+        signupSubPanel.SetActive(false);
+    }
+    
+    public void ShowSignupSubPanel()
+    {
+        loginMainPanel.SetActive(false);
+        loginSubPanel.SetActive(false);
+        signupSubPanel.SetActive(true);
+    }
 }

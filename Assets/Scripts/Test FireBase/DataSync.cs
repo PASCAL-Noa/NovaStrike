@@ -23,11 +23,10 @@ public class DataSync : MonoBehaviour
             if (task.Result == DependencyStatus.Available)
             {
                 FirebaseApp app = FirebaseApp.DefaultInstance;
-
-                firebaseDatabase = FirebaseDatabase.GetInstance(app, "https://novastrike-ae947-default-rtdb.europe-west1.firebasedatabase.app/");
+                firebaseDatabase = FirebaseDatabase.GetInstance(app, "https://novastrike-ae947-default-rtdb.europe-west1.firebasedatabase.app/"); 
                 dbRef = firebaseDatabase.RootReference;
 
-                Debug.Log("Firebase initialisé avec succés !");
+                Debug.Log("Firebase initialisé avec succès !");
             }
             else
             {
@@ -36,17 +35,30 @@ public class DataSync : MonoBehaviour
         });
     }
 
-    public void SavePlayerData(PlayerData playerData)
+
+    public void SavePlayerData(PlayerData playerData, Action onSaved = null)
     {
-        string json = JsonUtility.ToJson(playerData, true);
-        dbRef.Child("joueurs").Child(playerData.id).SetRawJsonValueAsync(json).ContinueWithOnMainThread(task =>
+        if (dbRef == null)
         {
-            if (task.IsCompleted)
-                Debug.Log($"sauvegarde joueur {playerData.id} Reussis");
-            else
-                Debug.LogError($"échec sauvegarde joueur {playerData.id} : " + task.Exception?.Message);
-        });
+            Debug.LogWarning("Firebase pas encore prêt, réessayer plus tard !");
+            return;
+        }
+
+        string json = JsonUtility.ToJson(playerData, true);
+        dbRef.Child("joueurs").Child(playerData.id).SetRawJsonValueAsync(json)
+            .ContinueWithOnMainThread(task =>
+            {
+                if (task.IsCompleted)
+                {
+                    Debug.Log($"Sauvegarde joueur {playerData.id} réussie !");
+                    onSaved?.Invoke();
+                }
+                else
+                    Debug.LogError($"Échec sauvegarde joueur {playerData.id} : {task.Exception?.Message}");
+            });
     }
+
+
 
     public void LoadPlayerData(string playerId, Action<PlayerData> onLoaded)
     {
